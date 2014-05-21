@@ -80,9 +80,6 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (_holdingBall) {
-			AttachAndHoldBall (); 	
-		}
 		_elapsedStateTime += Time.deltaTime;
 		if (_state.Equals( PlayerStateEnumIdle)) {	
 			if (_holdingBall) {
