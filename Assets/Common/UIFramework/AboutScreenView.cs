@@ -14,7 +14,6 @@ using System.Collections.Generic;
 public class AboutScreenView : ISampleAppUIView
 {
     #region PUBLIC_MEMBER_VARIABLES
-    public TextAsset m_AboutText;
     public System.Action OnStartButtonTapped;
     #endregion PUBLIC_MEMBER_VARIABLES
     
@@ -50,7 +49,6 @@ public class AboutScreenView : ISampleAppUIView
     #region ISampleAppUIView implementation
     public void LoadView ()
     {
-        m_AboutText = Resources.Load("Vuforia_About") as TextAsset;
         mBox = new SampleAppUIBox(SampleAppUIConstants.BoxRect, SampleAppUIConstants.MainBackground);
         mAboutTitleBgStyle = new GUIStyle();
         mOKButtonBgStyle = new GUIStyle();
@@ -136,9 +134,7 @@ public class AboutScreenView : ISampleAppUIView
     
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
-        
-        GUILayout.Label(m_AboutText.text);
-    
+            
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
         

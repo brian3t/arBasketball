@@ -22,7 +22,6 @@ public class AppManager : MonoBehaviour {
     
     #region PRIVATE_MEMBER_VARIABLES
     private SplashScreenView mSplashView;
-    private AboutScreenView mAboutView;
     private float mSecondsVisible = 2.0f;
     #endregion PRIVATE_MEMBER_VARIABLES
     
@@ -30,9 +29,6 @@ public class AppManager : MonoBehaviour {
     public virtual void InitManager () 
     {
         mSplashView = new SplashScreenView();
-        mAboutView = new AboutScreenView();
-        mAboutView.SetTitle(TitleForAboutPage);
-        mAboutView.OnStartButtonTapped      += OnAboutStartButtonTapped;
         m_UIEventHandler.CloseView          += OnTappedOnCloseButton;
         m_UIEventHandler.GoToAboutPage      += OnTappedOnGoToAboutPage;
         InputController.SingleTapped        += OnSingleTapped;
@@ -59,7 +55,6 @@ public class AppManager : MonoBehaviour {
                 break;
             
             case ViewType.ABOUTVIEW:
-                mAboutView.UpdateUI(true);
                 break;
             
             case ViewType.UIVIEW:
@@ -138,7 +133,6 @@ public class AppManager : MonoBehaviour {
         yield return new WaitForSeconds(mSecondsVisible);
         mSplashView.UnLoadView();
         mActiveViewType = ViewType.ABOUTVIEW;
-        mAboutView.LoadView();
         m_UIEventHandler.Bind();
         yield return null;
     }
