@@ -32,6 +32,6 @@ public class PlayerBallHand : MonoBehaviour {
 
 	//notify parents on trigger
 	public void OnTriggerEnter(Collider collider){
-//		_player.OnTriggerEnter (collider);
+		_player.OnTriggerEnter (collider);
 	}
 }

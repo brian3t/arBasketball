@@ -5,9 +5,11 @@ public class ScoreBoard : MonoBehaviour
 {
 
 		public TextMesh pointsTextMesh;
-		public TextMesh timeRemainingTextMesh;
+	public TextMesh timeRemainingTextMesh;
+	public TextMesh distanceTextMesh;
+	public TextMesh statusTextMesh;
 
-		// Use this for initialization
+	// Use this for initialization
 		void Start ()
 		{
 	
@@ -27,7 +29,11 @@ public class ScoreBoard : MonoBehaviour
 
 		public void setPoints (string points)
 		{
-				pointsTextMesh.text = points;
+				pointsTextMesh.text = "Points: " + points;
 		}
+
+	public void UpdateDistance(float distance){
+		distanceTextMesh.text = "Dist: " + distance;
+	}
 
 }

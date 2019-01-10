@@ -1,13 +1,12 @@
-arBasketball
-============
+unityBasketballProj
+===================
 
-Augmented Reality Bastketball app
-Implemented using XCode 5, Objective C, Unity 3D + Mono, C#, Qualcomm AR
+Basketball Augmented Reality
+Tilt to roll the ball
+Hold and release to shoot the ball
+Print the target image from here: https://www.dropbox.com/s/hok1p6xpytc1qu7/budweiser_4312.jpg
+===========
 
-Published:
 
-iTunes: https://itunes.apple.com/us/app/hero-basketball-ar/id887773052?mt=8 
-
-App Shopper: http://appshopper.com/entertainment/hero-basketball-ar
-
-Brian Nguyen.
+- Note that main scene is at Assets/Untitled.unity
+- iPhone lib should be provided with your local Unity installation. If you need iphone lib, download from here https://www.dropbox.com/s/lxtytf1v3zmb166/libiPhone-lib.a
